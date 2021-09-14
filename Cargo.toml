@@ -1,0 +1,13 @@
+[package]
+name = "p2pgossip"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = "2.33.*"
+actix-web = "*"
+url = {version = "2.1.1", features = ["serde"]}
+chrono = { version = "0.4", features = ["serde", "rustc-serialize"] }
+serde = {version = "*", features = ["derive"]}
