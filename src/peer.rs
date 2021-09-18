@@ -3,6 +3,7 @@ use std::{error::Error, net::SocketAddr};
 use chrono::{DateTime, Utc};
 use std::time::Duration;
 use serde::{Deserialize, Serialize};
+use actix_web::web::Json;
 
 #[derive(Serialize, Deserialize, Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub struct Peer {
@@ -21,8 +22,18 @@ impl From<SocketAddr> for Peer {
 	}
 }
 
+impl From<Json<Peer>> for Peer {
+	fn from(json: Json<Peer>) -> Self {
+		Peer {
+			started: json.started,
+			period: json.period,
+			port: json.port,
+		}
+	}
+}
+
 impl Peer {
-	pub fn try_from(args: clap::ArgMatches) -> Result<Self, Box<dyn Error>> {
+	pub fn try_from(args: &clap::ArgMatches) -> Result<Self, Box<dyn Error>> {
 		let started = DateTime::<Utc>::from(std::time::SystemTime::now());
 		let period =
 			Duration::from_secs(args.value_of("period").unwrap_or_default().parse::<u64>()?);
