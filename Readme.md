@@ -19,7 +19,7 @@ This is a standard `rust` project.
 Clone the codebase.
 
 ```bash
-git clone https://github.com/appetrosyan/p2pgossip-example.git
+git clone https://github.com/appetrosyan/p2pgossip-demo.git
 ```
 
 then compile the release build.
