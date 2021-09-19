@@ -4,6 +4,7 @@ mod message;
 mod peer;
 mod server;
 mod logging;
+pub mod tests;
 
 use crate::{application_state::ApplicationState, peer::periodically_send_message};
 use crate::logging::LogExt;
