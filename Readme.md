@@ -1,6 +1,8 @@
 # Peer to Peer Gossip Simulator
 
 [![Build](https://github.com/appetrosyan/p2pgossip-example/actions/workflows/build.yml/badge.svg)](https://github.com/appetrosyan/p2pgossip-example/actions/workflows/build.yml)
+
+
 This is a demo of what I can do in Rust. It's not meant to be a
 complete application, but rather a showcase of coding style,
 understanding of `async`, and knowledge of `actix_web` and `tokio`.
