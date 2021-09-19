@@ -7,12 +7,16 @@ edition = "2018"
 
 [dependencies]
 clap = "2.33.*"
-actix-web = "*"
-url = {version = "2.1.1", features = ["serde"]}
-chrono = { version = "0.4", features = ["serde", "rustc-serialize"] }
-serde = {version = "*", features = ["derive"]}
-serde_json = { version = "*"}
-env_logger = "*"
-log = "*"
-tokio = {version= "*", features = ["macros"]}
-futures = "*"
+actix-web = "^3.3.2"
+url = {version = "^2.1.1", features = ["serde"]}
+chrono = { version = "^0.4", features = ["serde", "rustc-serialize"] }
+serde = {version = "~1.0.130", features = ["derive"]}
+serde_json = { version = "~1.0.68"}
+env_logger = "^0.9.0"
+log = "~0.4.14"
+tokio = {version= "^1.11.0", features = ["macros"]}
+futures = "~0.3.17"
+
+[dev-dependencies]
+actix-test = "*"
+actix-rt = "^2.2.0"
