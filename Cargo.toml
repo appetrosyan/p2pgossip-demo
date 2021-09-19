@@ -14,4 +14,5 @@ serde = {version = "*", features = ["derive"]}
 serde_json = { version = "*"}
 env_logger = "*"
 log = "*"
-tokio = "*"
+tokio = {version= "*", features = ["macros"]}
+futures = "*"
