@@ -113,7 +113,7 @@ should be able to communicate across networks.
 
 ## TODO
 
-- [ ] Unit Tests.
+- [X] Unit Tests.
 - [ ] Integration tests.
 - [ ] profiling.
 - [ ] communicating over https with TLS encryption.
